@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+const {
+  title,
+  description,
+  image = "/og-image.jpg"
+} = Astro.props;
+
+const siteName = "SmileCraft Dental Clinic";
+const url = Astro.url;
+---
+
+<title>{title} | {siteName}</title>
+
+<meta name="description" content={description} />
+
+<meta name="keywords" content="Dental Clinic, Dentist, Root Canal, Dental Implants, Teeth Whitening" />
+
+<link rel="canonical" href={url} />
+
+
+<!-- Open Graph -->
+
+<meta property="og:title" content={`${title} | ${siteName}`} />
+
+<meta property="og:description" content={description} />
+
+<meta property="og:image" content={image} />
+
+<meta property="og:type" content="website" />
+
+
+<!-- Twitter -->
+
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta name="twitter:title" content={`${title} | ${siteName}`} />
+
+<meta name="twitter:description" content={description} />
+
+<meta name="twitter:image" content={image} />
