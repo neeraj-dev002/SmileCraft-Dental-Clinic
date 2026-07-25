@@ -1,46 +1,40 @@
-# Astro Starter Kit: Basics
+# SmileCraft Dental Clinic
 
-```sh
-npm create astro@latest -- --template basics
-```
+SmileCraft Dental Clinic is a modern dental clinic management project designed to streamline patient care, appointment scheduling, treatment tracking, and clinic operations.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Features
 
-## 🚀 Project Structure
+- Patient registration and medical history management
+- Appointment booking and calendar view
+- Treatment planning and procedure tracking
+- Invoice generation and payment records
+- Staff management and role-based access
+- Clean and responsive user interface
 
-Inside of your Astro project, you'll see the following folders and files:
+## Technologies
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+- HTML, CSS, JavaScript
+- Backend framework or server-side language (e.g. Node.js, PHP, Python)
+- Database support for patient and appointment data
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Setup
 
-## 🧞 Commands
+1. Clone the project repository.
+2. Install dependencies if applicable.
+3. Configure database connection and environment settings.
+4. Run the application locally.
 
-All commands are run from the root of the project, from a terminal:
+## Usage
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- Register new patients and save medical history.
+- Schedule appointments and manage the clinic calendar.
+- Track treatments for ongoing dental care.
+- Generate invoices and record payments.
 
-## 👀 Want to learn more?
+## Contributing
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Contributions are welcome. Please open issues or pull requests to improve functionality, UI, or documentation.
+
+## License
+
+Use this project as needed and adapt it for your dental clinic workflow.
