@@ -1,0 +1,189 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const doctors = [
+  {
+    image: "/images/doctors/dr-arjun.webp",
+    name: "Dr. Arjun Sharma",
+    qualification: "BDS, MDS (Dental Surgery)",
+    specialization: "Root Canal Specialist",
+    experience: "12+ Years Experience"
+  },
+  {
+    image: "/images/doctors/dr-neha.webp",
+    name: "Dr. Neha Verma",
+    qualification: "BDS, MDS (Orthodontics)",
+    specialization: "Braces & Smile Design",
+    experience: "8+ Years Experience"
+  },
+  {
+    image: "/images/doctors/dr-rahul.webp",
+    name: "Dr. Rahul Mehta",
+    qualification: "BDS, Cosmetic Dentistry",
+    specialization: "Dental Implants Specialist",
+    experience: "10+ Years Experience"
+  }
+];
+---
+
+<BaseLayout>
+
+
+<!-- Hero -->
+
+<section class="bg-background-light py-20 reveal ">
+
+<div class="container mx-auto px-5 text-center lg:px-8">
+
+
+<span
+class="rounded-full bg-secondary-light px-4 py-2 text-sm font-medium text-secondary-dark"
+>
+Our Doctors
+</span>
+
+
+<h1
+class="mt-6 text-4xl font-bold text-text-primary sm:text-5xl"
+>
+Meet Our Expert Dentists
+</h1>
+
+
+<p
+class="mx-auto mt-5 max-w-2xl text-text-secondary"
+>
+Our experienced dental professionals provide advanced treatments
+with personalized care.
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<!-- Doctors Cards -->
+
+
+<section class="bg-white py-20">
+
+
+<div class="container mx-auto px-5 lg:px-8">
+
+
+<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+
+{
+doctors.map((doctor)=>(
+
+
+<div
+class="overflow-hidden rounded-3xl border border-border bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+>
+
+
+<img
+src={doctor.image}
+alt={doctor.name}
+class="h-80 w-full object-cover"
+/>
+
+
+
+<div class="p-6">
+
+
+<h2
+class="text-xl font-bold text-text-primary"
+>
+{doctor.name}
+</h2>
+
+
+<p
+class="mt-2 text-sm text-primary"
+>
+{doctor.qualification}
+</p>
+
+
+<p
+class="mt-3 text-sm text-text-secondary"
+>
+{doctor.specialization}
+</p>
+
+
+<span
+class="mt-4 inline-block rounded-full bg-primary-light px-4 py-2 text-sm text-primary"
+>
+{doctor.experience}
+</span>
+
+
+<a
+href="/appointment"
+class="mt-5 block font-medium text-primary hover:text-primary-dark"
+>
+Book Appointment →
+</a>
+
+
+</div>
+
+
+</div>
+
+
+))
+}
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- CTA -->
+
+<section class="bg-primary py-16">
+
+<div class="container mx-auto px-5 text-center">
+
+
+<h2
+class="text-3xl font-bold text-white"
+>
+Consult With Our Dental Experts
+</h2>
+
+
+<p
+class="mt-4 text-white/80"
+>
+Get professional dental advice and start your smile journey.
+</p>
+
+
+<a
+href="/appointment"
+class="mt-7 inline-block rounded-full bg-white px-8 py-3 font-semibold text-primary"
+>
+Schedule Visit
+</a>
+
+
+</div>
+
+</section>
+
+
+</BaseLayout>
