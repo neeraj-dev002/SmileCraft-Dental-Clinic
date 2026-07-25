@@ -1,0 +1,119 @@
+---
+const navLinks = [
+  {
+    name: "Home",
+    url: "/",
+  },
+  {
+    name: "About",
+    url: "/about",
+  },
+  {
+    name: "Services",
+    url: "/services",
+  },
+  {
+    name: "Doctors",
+    url: "/doctors",
+  },
+  {
+    name: "Gallery",
+    url: "/gallery",
+  },
+  {
+    name: "Contact",
+    url: "/contact",
+  },
+];
+---
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-border">
+
+  <div class="container mx-auto px-5 lg:px-8">
+
+    <div class="flex h-20 items-center justify-between">
+
+
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3">
+
+        <div
+          class="flex h-11 w-11 items-center justify-center rounded-full bg-primary text-white font-bold text-xl"
+        >
+          S
+        </div>
+
+        <div>
+          <h1 class="text-xl font-bold text-text-primary">
+            SmileCraft
+          </h1>
+
+          <p class="text-xs text-text-secondary">
+            Dental Clinic
+          </p>
+        </div>
+
+      </a>
+
+
+
+      <!-- Desktop Menu -->
+      <nav class="hidden lg:flex items-center gap-8">
+
+        {
+          navLinks.map((link) => (
+            <a
+              href={link.url}
+              class="text-sm font-medium text-text-secondary hover:text-primary transition"
+            >
+              {link.name}
+            </a>
+          ))
+        }
+
+      </nav>
+
+
+
+      <!-- CTA -->
+      <div class="hidden lg:block">
+
+        <a
+          href="/appointment"
+          class="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-primary-dark transition"
+        >
+          Book Appointment
+        </a>
+
+      </div>
+
+
+
+      <!-- Mobile Button -->
+      <button
+        class="lg:hidden flex h-10 w-10 items-center justify-center rounded-md border border-border text-text-primary"
+      >
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          class="h-6 w-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+
+      </button>
+
+
+    </div>
+
+  </div>
+
+</header>
