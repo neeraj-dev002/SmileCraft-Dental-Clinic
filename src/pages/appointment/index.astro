@@ -1,4 +1,5 @@
 ---
+import PageHero from "../../components/common/PageHero.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const services = [
@@ -11,43 +12,15 @@ const services = [
 ];
 ---
 
-<BaseLayout>
+<BaseLayout
+  title="Book Appointment"
+  description="Schedule your dental appointment with SmileCraft Clinic."
+>
 
-
-<!-- Hero -->
-
-<section class="bg-background-light py-20 reveal ">
-
-  <div class="container mx-auto px-5 text-center lg:px-8">
-
-
-    <span
-      class="rounded-full bg-primary-light px-4 py-2 text-sm font-medium text-primary"
-    >
-      Appointment
-    </span>
-
-
-    <h1
-      class="mt-6 text-4xl font-bold text-text-primary sm:text-5xl"
-    >
-      Book Your Dental Appointment
-    </h1>
-
-
-    <p
-      class="mx-auto mt-5 max-w-2xl text-text-secondary"
-    >
-      Schedule your visit with our expert dentists and get the best
-      dental care experience.
-    </p>
-
-
-  </div>
-
-</section>
-
-
+<PageHero
+  title="Book Appointment"
+  subtitle="Schedule your visit online."
+/>
 
 
 <!-- Form -->
