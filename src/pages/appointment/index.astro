@@ -1,0 +1,212 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const services = [
+  "Root Canal Treatment",
+  "Teeth Whitening",
+  "Dental Implants",
+  "Braces Treatment",
+  "Kids Dentistry",
+  "Smile Designing"
+];
+---
+
+<BaseLayout>
+
+
+<!-- Hero -->
+
+<section class="bg-background-light py-20 reveal ">
+
+  <div class="container mx-auto px-5 text-center lg:px-8">
+
+
+    <span
+      class="rounded-full bg-primary-light px-4 py-2 text-sm font-medium text-primary"
+    >
+      Appointment
+    </span>
+
+
+    <h1
+      class="mt-6 text-4xl font-bold text-text-primary sm:text-5xl"
+    >
+      Book Your Dental Appointment
+    </h1>
+
+
+    <p
+      class="mx-auto mt-5 max-w-2xl text-text-secondary"
+    >
+      Schedule your visit with our expert dentists and get the best
+      dental care experience.
+    </p>
+
+
+  </div>
+
+</section>
+
+
+
+
+<!-- Form -->
+
+<section class="bg-white py-20">
+
+
+<div class="container mx-auto max-w-4xl px-5 lg:px-8">
+
+
+<div
+class="rounded-3xl border border-border bg-white p-8 shadow-xl"
+>
+
+
+<form class="grid gap-5 md:grid-cols-2">
+
+
+<input
+type="text"
+placeholder="Full Name"
+class="rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
+/>
+
+
+<input
+type="tel"
+placeholder="Phone Number"
+class="rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
+/>
+
+
+
+<input
+type="email"
+placeholder="Email Address"
+class="rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
+/>
+
+
+
+<select
+class="rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
+>
+
+<option>
+Select Treatment
+</option>
+
+
+{
+services.map((service)=>(
+<option>
+{service}
+</option>
+))
+}
+
+
+</select>
+
+
+
+<input
+type="date"
+class="rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
+/>
+
+
+
+<input
+type="time"
+class="rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
+/>
+
+
+
+<textarea
+rows="5"
+placeholder="Message / Dental Problem"
+class="md:col-span-2 rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
+></textarea>
+
+
+
+<button
+type="submit"
+class="md:col-span-2 rounded-full bg-primary py-3 font-semibold text-white transition hover:bg-primary-dark"
+>
+Request Appointment
+</button>
+
+
+</form>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- Trust Section -->
+
+
+<section class="bg-primary py-16">
+
+
+<div class="container mx-auto px-5 text-center">
+
+
+<h2
+class="text-3xl font-bold text-white"
+>
+Why Book With SmileCraft?
+</h2>
+
+
+<div
+class="mt-8 grid gap-5 sm:grid-cols-3"
+>
+
+
+<div class="rounded-2xl bg-white/10 p-5 text-white">
+🦷
+<p class="mt-2">
+Experienced Dentists
+</p>
+</div>
+
+
+<div class="rounded-2xl bg-white/10 p-5 text-white">
+🏥
+<p class="mt-2">
+Modern Clinic
+</p>
+</div>
+
+
+<div class="rounded-2xl bg-white/10 p-5 text-white">
+⭐
+<p class="mt-2">
+Trusted Care
+</p>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+</BaseLayout>
