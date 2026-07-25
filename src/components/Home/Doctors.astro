@@ -1,0 +1,144 @@
+---
+const doctors = [
+  {
+    image: "/images/doctors/dr-arjun.jpg",
+    name: "Dr. Arjun Sharma",
+    qualification: "BDS, MDS (Dental Surgery)",
+    specialization: "Root Canal Specialist",
+    experience: "12+ Years Experience"
+  },
+  {
+    image: "/images/doctors/dr-neha.avif",
+    name: "Dr. Neha Verma",
+    qualification: "BDS, MDS (Orthodontics)",
+    specialization: "Braces & Smile Design",
+    experience: "8+ Years Experience"
+  },
+  {
+    image: "/images/doctors/dr-rahul.jpg",
+    name: "Dr. Rahul Mehta",
+    qualification: "BDS, Cosmetic Dentistry",
+    specialization: "Dental Implants",
+    experience: "10+ Years Experience"
+  }
+];
+---
+
+<section class="bg-white py-20 lg:py-28">
+
+  <div class="container mx-auto px-5 lg:px-8">
+
+
+    <!-- Heading -->
+
+    <div class="mx-auto max-w-2xl text-center">
+
+      <span
+        class="inline-flex rounded-full bg-secondary-light px-4 py-2 text-sm font-medium text-secondary-dark"
+      >
+        Our Doctors
+      </span>
+
+
+      <h2
+        class="mt-5 text-3xl font-bold text-text-primary sm:text-4xl"
+      >
+        Meet Our Expert Dentists
+      </h2>
+
+
+      <p
+        class="mt-4 text-text-secondary"
+      >
+        Our experienced dental specialists provide advanced treatments
+        with personalized care.
+      </p>
+
+    </div>
+
+
+
+    <!-- Doctor Cards -->
+
+    <div
+      class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+    >
+
+      {
+        doctors.map((doctor) => (
+
+          <div
+            class="group overflow-hidden rounded-3xl border border-border bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+          >
+
+
+            <!-- Image -->
+
+            <div class="overflow-hidden">
+
+              <img
+                src={doctor.image}
+                alt={doctor.name}
+                class="h-80 w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+
+            </div>
+
+
+
+            <!-- Content -->
+
+            <div class="p-6">
+
+
+              <h3
+                class="text-xl font-bold text-text-primary"
+              >
+                {doctor.name}
+              </h3>
+
+
+              <p
+                class="mt-2 text-sm text-primary"
+              >
+                {doctor.qualification}
+              </p>
+
+
+              <p
+                class="mt-3 text-sm text-text-secondary"
+              >
+                {doctor.specialization}
+              </p>
+
+
+              <div
+                class="mt-4 inline-flex rounded-full bg-primary-light px-4 py-2 text-sm text-primary"
+              >
+                {doctor.experience}
+              </div>
+
+
+              <a
+                href="/doctors"
+                class="mt-5 block font-medium text-primary hover:text-primary-dark"
+              >
+                View Profile →
+              </a>
+
+
+            </div>
+
+
+          </div>
+
+        ))
+      }
+
+
+    </div>
+
+
+  </div>
+
+</section>
