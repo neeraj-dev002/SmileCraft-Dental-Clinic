@@ -1,4 +1,5 @@
 ---
+import PageHero from "../../components/common/PageHero.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const services = [
@@ -41,7 +42,14 @@ const services = [
 ];
 ---
 
-<BaseLayout>
+<BaseLayout
+  title="Dental Services"
+  description="Explore our dental treatments including root canal, implants, braces and whitening."
+>
+<PageHero
+  title="Our Services"
+  subtitle="Comprehensive dental treatments for every member of your family."
+/>
 
 <!-- Hero -->
 
