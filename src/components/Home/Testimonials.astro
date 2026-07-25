@@ -1,0 +1,129 @@
+---
+const testimonials = [
+  {
+    name: "Priya Sharma",
+    treatment: "Root Canal Treatment",
+    review:
+      "The entire treatment was smooth and painless. The doctor explained everything clearly and the clinic staff was very supportive.",
+    rating: 5
+  },
+  {
+    name: "Rahul Verma",
+    treatment: "Dental Implants",
+    review:
+      "Excellent experience. Modern clinic, professional doctors and very comfortable treatment process.",
+    rating: 5
+  },
+  {
+    name: "Ananya Singh",
+    treatment: "Teeth Whitening",
+    review:
+      "I loved the results of my smile makeover. Highly recommended for quality dental care.",
+    rating: 5
+  }
+];
+---
+
+<section class="bg-background-light py-20 lg:py-28">
+
+  <div class="container mx-auto px-5 lg:px-8">
+
+
+    <!-- Heading -->
+
+    <div class="mx-auto max-w-2xl text-center">
+
+      <span
+        class="inline-flex rounded-full bg-primary-light px-4 py-2 text-sm font-medium text-primary"
+      >
+        Patient Reviews
+      </span>
+
+
+      <h2
+        class="mt-5 text-3xl font-bold text-text-primary sm:text-4xl"
+      >
+        What Our Patients Say
+      </h2>
+
+
+      <p class="mt-4 text-text-secondary">
+        Real experiences from our happy patients who trusted us with their smiles.
+      </p>
+
+    </div>
+
+
+
+    <!-- Reviews -->
+
+    <div
+      class="mt-12 grid gap-6 lg:grid-cols-3"
+    >
+
+      {
+        testimonials.map((item) => (
+
+          <div
+            class="rounded-2xl border border-border bg-white p-7 shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+          >
+
+
+            <!-- Stars -->
+
+            <div class="flex gap-1 text-accent">
+
+              {
+                Array(item.rating)
+                  .fill(0)
+                  .map(() => (
+                    <span>★</span>
+                  ))
+              }
+
+            </div>
+
+
+
+            <!-- Review -->
+
+            <p
+              class="mt-5 text-sm leading-7 text-text-secondary"
+            >
+              "{item.review}"
+            </p>
+
+
+
+            <!-- Patient -->
+
+            <div class="mt-6 border-t border-border pt-5">
+
+              <h3
+                class="font-semibold text-text-primary"
+              >
+                {item.name}
+              </h3>
+
+
+              <p
+                class="text-sm text-primary"
+              >
+                {item.treatment}
+              </p>
+
+            </div>
+
+
+          </div>
+
+        ))
+      }
+
+
+    </div>
+
+
+  </div>
+
+</section>
