@@ -1,4 +1,7 @@
 ---
+import BackToTop from '../components/common/BackToTop.astro';
+import SEO from '../components/common/SEO.astro';
+import WhatsAppButton from '../components/common/WhatsAppButton.astro';
 import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
 import "../styles/global.css"; 
@@ -13,7 +16,11 @@ import "../styles/global.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title></title>
+		<title>SmileCraft Dental Clinic</title>
+	 <SEO
+    title="Home"
+    description="SmileCraft Dental Clinic provides advanced dental treatments with experienced dentists."
+  />
 	</head>
 	<body>
 		{/* header */}
@@ -21,6 +28,9 @@ import "../styles/global.css";
 		<slot />
 
 		<Footer/>
+		<WhatsAppButton />
+
+<BackToTop />
 		<script is:inline>
   const elements = document.querySelectorAll(".reveal");
 
