@@ -1,0 +1,75 @@
+---
+const stats = [
+  {
+    number: "10+",
+    title: "Years Experience",
+    description: "Providing quality dental care"
+  },
+  {
+    number: "5000+",
+    title: "Happy Patients",
+    description: "Trusted by many families"
+  },
+  {
+    number: "15+",
+    title: "Expert Doctors",
+    description: "Experienced dental specialists"
+  },
+  {
+    number: "100%",
+    title: "Patient Satisfaction",
+    description: "Comfortable dental experience"
+  }
+];
+---
+
+<section class="bg-primary py-16 reveal ">
+
+  <div class="container mx-auto px-5 lg:px-8">
+
+
+    <div
+      class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+    >
+
+
+      {
+        stats.map((item)=>(
+          
+          <div
+            class="rounded-2xl bg-white/10 p-6 text-center text-white backdrop-blur-sm transition hover:bg-white/20 reveal "
+          >
+
+            <h3
+              class="text-4xl font-bold"
+            >
+              {item.number}
+            </h3>
+
+
+            <p
+              class="mt-3 text-lg font-semibold"
+            >
+              {item.title}
+            </p>
+
+
+            <p
+              class="mt-2 text-sm text-white/70"
+            >
+              {item.description}
+            </p>
+
+
+          </div>
+
+        ))
+      }
+
+
+    </div>
+
+
+  </div>
+
+</section>
