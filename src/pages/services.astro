@@ -1,0 +1,188 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const services = [
+  {
+    icon: "🦷",
+    title: "Root Canal Treatment",
+    description:
+      "Save your damaged tooth with advanced and comfortable root canal treatment.",
+  },
+  {
+    icon: "✨",
+    title: "Teeth Whitening",
+    description:
+      "Get a brighter smile with professional teeth whitening solutions.",
+  },
+  {
+    icon: "😁",
+    title: "Dental Implants",
+    description:
+      "Restore missing teeth with natural-looking and durable dental implants.",
+  },
+  {
+    icon: "🦷",
+    title: "Braces Treatment",
+    description:
+      "Improve teeth alignment with modern orthodontic treatments.",
+  },
+  {
+    icon: "👶",
+    title: "Kids Dentistry",
+    description:
+      "Gentle and friendly dental care specially designed for children.",
+  },
+  {
+    icon: "😁",
+    title: "Smile Designing",
+    description:
+      "Transform your smile with customized cosmetic dental treatments.",
+  }
+];
+---
+
+<BaseLayout>
+
+
+<!-- Hero -->
+
+<section class="bg-background-light py-20">
+
+<div class="container mx-auto px-5 text-center lg:px-8">
+
+
+<span
+class="rounded-full bg-primary-light px-4 py-2 text-sm font-medium text-primary"
+>
+Our Services
+</span>
+
+
+<h1
+class="mt-6 text-4xl font-bold text-text-primary sm:text-5xl"
+>
+Complete Dental Care Solutions
+</h1>
+
+
+<p
+class="mx-auto mt-5 max-w-2xl text-text-secondary"
+>
+From preventive care to advanced dental procedures,
+we provide complete solutions for your oral health.
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<!-- Services Cards -->
+
+
+<section class="bg-white py-20">
+
+
+<div class="container mx-auto px-5 lg:px-8">
+
+
+<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+
+{
+services.map((service)=>(
+  
+<div
+class="rounded-2xl border border-border bg-white p-7 shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+>
+
+
+<div
+class="flex h-14 w-14 items-center justify-center rounded-xl bg-primary-light text-3xl"
+>
+{service.icon}
+</div>
+
+
+
+<h2
+class="mt-6 text-xl font-bold text-text-primary"
+>
+{service.title}
+</h2>
+
+
+
+<p
+class="mt-3 text-sm leading-6 text-text-secondary"
+>
+{service.description}
+</p>
+
+
+
+<a
+href="/appointment"
+class="mt-5 inline-block font-medium text-primary hover:text-primary-dark"
+>
+Book Treatment →
+</a>
+
+
+</div>
+
+
+))
+}
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- CTA -->
+
+
+<section class="bg-primary py-16">
+
+
+<div class="container mx-auto px-5 text-center">
+
+
+<h2
+class="text-3xl font-bold text-white"
+>
+Ready For A Healthier Smile?
+</h2>
+
+
+<p
+class="mt-4 text-white/80"
+>
+Book your dental appointment today with our expert dentists.
+</p>
+
+
+<a
+href="/appointment"
+class="mt-7 inline-block rounded-full bg-white px-8 py-3 font-semibold text-primary"
+>
+Book Appointment
+</a>
+
+
+</div>
+
+
+</section>
+
+
+</BaseLayout>
