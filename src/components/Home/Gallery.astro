@@ -1,0 +1,107 @@
+---
+const galleryImages = [
+  {
+    image: "/images/gallery/clinic.webp",
+    title: "Modern Dental Clinic"
+  },
+  {
+    image: "/images/gallery/treatment.webp",
+    title: "Advanced Dental Treatment"
+  },
+  {
+    image: "/images/gallery/equipment.webp",
+    title: "Modern Equipment"
+  },
+  {
+    image: "/images/gallery/doctor.webp",
+    title: "Expert Dental Care"
+  },
+  {
+    image: "/images/gallery/patient.webp",
+    title: "Patient Friendly Environment"
+  },
+  {
+    image: "/images/gallery/reception.webp",
+    title: "Comfortable Reception"
+  }
+];
+---
+
+<section class="bg-white py-20 lg:py-28 reveal ">
+
+  <div class="container mx-auto px-5 lg:px-8">
+
+
+    <!-- Heading -->
+
+    <div class="mx-auto max-w-2xl text-center">
+
+      <span
+        class="inline-flex rounded-full bg-secondary-light px-4 py-2 text-sm font-medium text-secondary-dark"
+      >
+        Our Gallery
+      </span>
+
+
+      <h2
+        class="mt-5 text-3xl font-bold text-text-primary sm:text-4xl"
+      >
+        Explore Our Dental Clinic
+      </h2>
+
+
+      <p
+        class="mt-4 text-text-secondary"
+      >
+        Take a look at our modern clinic, advanced technology and patient care facilities.
+      </p>
+
+    </div>
+
+
+
+    <!-- Gallery Grid -->
+
+    <div
+      class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+    >
+
+      {
+        galleryImages.map((item) => (
+
+          <div
+            class="group overflow-hidden rounded-2xl reveal "
+          >
+
+            <img
+              src={item.image}
+              alt={item.title}
+              class="h-72 w-full object-cover transition duration-500 group-hover:scale-110"
+            />
+
+
+            <div
+              class="bg-white p-4"
+            >
+
+              <h3
+                class="font-semibold text-text-primary"
+              >
+                {item.title}
+              </h3>
+
+            </div>
+
+
+          </div>
+
+        ))
+      }
+
+
+    </div>
+
+
+  </div>
+
+</section>
