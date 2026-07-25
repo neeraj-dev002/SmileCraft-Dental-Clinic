@@ -1,0 +1,161 @@
+---
+const services = [
+  "Teeth Cleaning",
+  "Root Canal Treatment",
+  "Dental Implants",
+  "Teeth Whitening",
+  "Braces Treatment",
+  "Kids Dentistry"
+];
+---
+
+<section class="bg-primary py-20 lg:py-28 reveal ">
+
+  <div class="container mx-auto px-5 lg:px-8">
+
+
+    <div class="grid gap-10 lg:grid-cols-2">
+
+
+      <!-- Left Content -->
+
+      <div class="text-white">
+
+
+        <span
+          class="inline-flex rounded-full bg-white/20 px-4 py-2 text-sm font-medium"
+        >
+          Book Appointment
+        </span>
+
+
+        <h2
+          class="mt-5 text-3xl font-bold sm:text-4xl"
+        >
+          Get The Best Dental Care For Your Smile
+        </h2>
+
+
+        <p
+          class="mt-5 max-w-lg text-white/80"
+        >
+          Schedule your appointment with our experienced dentists
+          and get personalized dental treatment.
+        </p>
+
+
+
+        <div class="mt-8 space-y-4">
+
+
+          <div class="flex items-center gap-3">
+            <span class="text-xl">📞</span>
+            <p>
+              +91 98765 43210
+            </p>
+          </div>
+
+
+          <div class="flex items-center gap-3">
+            <span class="text-xl">🕒</span>
+            <p>
+              Mon - Sat : 9 AM - 8 PM
+            </p>
+          </div>
+
+
+          <div class="flex items-center gap-3">
+            <span class="text-xl">📍</span>
+            <p>
+              Your Clinic Address
+            </p>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+      <!-- Form -->
+
+      <div
+        class="rounded-3xl bg-white p-8 shadow-xl reveal "
+      >
+
+        <form class="space-y-5">
+
+
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="w-full rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
+          />
+
+
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            class="w-full rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
+          />
+
+
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="w-full rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
+          />
+
+
+
+          <select
+            class="w-full rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
+          >
+
+            <option>
+              Select Service
+            </option>
+
+            {
+              services.map((service)=>(
+                <option>
+                  {service}
+                </option>
+              ))
+            }
+
+          </select>
+
+
+
+          <textarea
+            rows="4"
+            placeholder="Your Message"
+            class="w-full rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
+          ></textarea>
+
+
+
+          <button
+            type="submit"
+            class="w-full rounded-full bg-primary px-6 py-3 font-semibold text-white transition hover:bg-primary-dark"
+          >
+            Submit Appointment
+          </button>
+
+
+        </form>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
