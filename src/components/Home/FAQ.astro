@@ -1,0 +1,108 @@
+---
+const faqs = [
+  {
+    question: "Is root canal treatment painful?",
+    answer:
+      "With modern dental technology and anesthesia, root canal treatment is comfortable and causes minimal discomfort."
+  },
+  {
+    question: "How can I book a dental appointment?",
+    answer:
+      "You can book an appointment by calling our clinic or using our online appointment form."
+  },
+  {
+    question: "What dental treatments do you provide?",
+    answer:
+      "We provide teeth cleaning, root canal treatment, dental implants, braces, whitening and cosmetic dentistry."
+  },
+  {
+    question: "Do you provide emergency dental care?",
+    answer:
+      "Yes, we provide emergency dental assistance for urgent dental problems."
+  },
+  {
+    question: "Is teeth whitening safe?",
+    answer:
+      "Yes, professional teeth whitening performed by dentists is safe and effective."
+  }
+];
+---
+
+<section class="bg-background-light py-20 lg:py-28 reveal " >
+
+  <div class="container mx-auto px-5 lg:px-8">
+
+
+    <!-- Heading -->
+
+    <div class="mx-auto max-w-2xl text-center">
+
+      <span
+        class="inline-flex rounded-full bg-primary-light px-4 py-2 text-sm font-medium text-primary"
+      >
+        FAQ
+      </span>
+
+
+      <h2
+        class="mt-5 text-3xl font-bold text-text-primary sm:text-4xl"
+      >
+        Frequently Asked Questions
+      </h2>
+
+
+      <p class="mt-4 text-text-secondary">
+        Find answers to common questions about our dental treatments.
+      </p>
+
+    </div>
+
+
+
+    <!-- FAQ List -->
+
+    <div
+      class="mx-auto mt-12 max-w-3xl space-y-4"
+    >
+
+      {
+        faqs.map((faq) => (
+
+          <details
+            class="group rounded-xl border border-border bg-white p-5 reveal "
+          >
+
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between font-semibold text-text-primary"
+            >
+
+              {faq.question}
+
+              <span
+                class="text-primary transition group-open:rotate-45"
+              >
+                +
+              </span>
+
+            </summary>
+
+
+            <p
+              class="mt-4 text-sm leading-6 text-text-secondary"
+            >
+              {faq.answer}
+            </p>
+
+
+          </details>
+
+        ))
+      }
+
+
+    </div>
+
+
+  </div>
+
+</section>
