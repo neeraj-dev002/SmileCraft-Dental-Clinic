@@ -1,0 +1,115 @@
+---
+const links = [
+  {
+    name: "Home",
+    url: "/"
+  },
+  {
+    name: "About",
+    url: "/about"
+  },
+  {
+    name: "Services",
+    url: "/services"
+  },
+  {
+    name: "Doctors",
+    url: "/doctors"
+  },
+  {
+    name: "Contact",
+    url: "/contact"
+  }
+];
+---
+
+<div class="md:hidden">
+
+  <button
+    id="menu-btn"
+    class="text-2xl text-text-primary"
+  >
+    ☰
+  </button>
+
+
+
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 z-50 hidden bg-white p-6"
+  >
+
+
+    <div class="flex items-center justify-between">
+
+
+      <a
+        href="/"
+        class="text-2xl font-bold text-primary"
+      >
+        SmileCraft
+      </a>
+
+
+      <button
+        id="close-btn"
+        class="text-3xl"
+      >
+        ×
+      </button>
+
+
+    </div>
+
+
+
+    <nav class="mt-10 space-y-6">
+
+      {
+        links.map((link)=>(
+          
+          <a
+            href={link.url}
+            class="block text-lg font-medium text-text-primary hover:text-primary"
+          >
+            {link.name}
+          </a>
+
+        ))
+      }
+
+
+      <a
+        href="/appointment"
+        class="block rounded-full bg-primary px-6 py-3 text-center font-semibold text-white"
+      >
+        Book Appointment
+      </a>
+
+
+    </nav>
+
+
+  </div>
+
+
+</div>
+
+
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const closeBtn = document.getElementById("close-btn");
+  const menu = document.getElementById("mobile-menu");
+
+
+  menuBtn?.addEventListener("click",()=>{
+    menu?.classList.remove("hidden");
+  });
+
+
+  closeBtn?.addEventListener("click",()=>{
+    menu?.classList.add("hidden");
+  });
+
+</script>
