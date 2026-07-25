@@ -152,6 +152,91 @@ Send Message
 </form>
 
 
+<script>
+
+const form = document.querySelector("#contactForm");
+
+
+form?.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+
+  const formData = new FormData(form);
+
+
+  const data = {
+
+    name: formData.get("name"),
+
+    email: formData.get("email"),
+
+    phone: formData.get("phone"),
+
+    message: formData.get("message"),
+
+  };
+
+
+
+  try {
+
+
+    const response = await fetch("/api/contact", {
+
+      method: "POST",
+
+      headers: {
+
+        "Content-Type": "application/json",
+
+      },
+
+      body: JSON.stringify(data),
+
+    });
+
+
+
+const result = await response.json();
+    if(result.success){
+
+
+      alert("Message sent successfully!");
+
+
+      form.reset();
+
+
+    } else {
+
+
+      alert(
+        result.error || "Something went wrong!"
+      );
+
+
+    }
+
+
+
+  } catch(error) {
+
+
+    console.error(error);
+
+
+    alert("Server error occurred!");
+
+
+  }
+
+
+});
+
+
+</script>
+
 </div>
 
 
