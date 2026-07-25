@@ -1,0 +1,25 @@
+<button
+  id="backToTop"
+  class="fixed bottom-24 right-6 z-50 hidden h-12 w-12 rounded-full bg-primary text-xl text-white shadow-lg transition hover:scale-110"
+>
+  ↑
+</button>
+
+<script is:inline>
+  const button = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      button.classList.remove("hidden");
+    } else {
+      button.classList.add("hidden");
+    }
+  });
+
+  button?.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
