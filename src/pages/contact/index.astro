@@ -2,22 +2,21 @@
 import PageHero from "../../components/common/PageHero.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
+
 <BaseLayout
   title="Contact Us"
   description="Contact SmileCraft Dental Clinic for appointments and dental queries."
 >
+
 <PageHero
   title="Contact Us"
   subtitle="Get in touch with our dental team."
 />
- 
 
 
 <!-- Contact Section -->
 
-
 <section class="bg-white py-20">
-
 
 <div class="container mx-auto px-5 lg:px-8">
 
@@ -30,9 +29,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 <div>
 
 
-<h2
-class="text-3xl font-bold text-text-primary"
->
+<h2 class="text-3xl font-bold text-text-primary">
 Contact Information
 </h2>
 
@@ -40,9 +37,7 @@ Contact Information
 <div class="mt-8 space-y-6">
 
 
-<div
-class="rounded-2xl border border-border p-5"
->
+<div class="rounded-2xl border border-border p-5">
 
 <h3 class="font-semibold text-text-primary">
 📍 Clinic Address
@@ -56,9 +51,7 @@ class="rounded-2xl border border-border p-5"
 
 
 
-<div
-class="rounded-2xl border border-border p-5"
->
+<div class="rounded-2xl border border-border p-5">
 
 <h3 class="font-semibold text-text-primary">
 📞 Phone Number
@@ -72,9 +65,7 @@ class="rounded-2xl border border-border p-5"
 
 
 
-<div
-class="rounded-2xl border border-border p-5"
->
+<div class="rounded-2xl border border-border p-5">
 
 <h3 class="font-semibold text-text-primary">
 🕒 Clinic Timing
@@ -103,32 +94,35 @@ class="rounded-3xl border border-border bg-white p-8 shadow-lg"
 >
 
 
-<h2
-class="text-2xl font-bold text-text-primary"
->
+<h2 class="text-2xl font-bold text-text-primary">
 Send Message
 </h2>
 
 
 
-<form class="mt-6 space-y-5">
+<form id="contactForm" class="mt-6 space-y-5">
 
 
 <input
+name="name"
 type="text"
 placeholder="Your Name"
 class="w-full rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
 />
 
 
+
 <input
+name="email"
 type="email"
 placeholder="Email Address"
 class="w-full rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
 />
 
 
+
 <input
+name="phone"
 type="tel"
 placeholder="Phone Number"
 class="w-full rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
@@ -137,6 +131,7 @@ class="w-full rounded-xl border border-border px-5 py-3 outline-none focus:borde
 
 
 <textarea
+name="message"
 rows="5"
 placeholder="Your Message"
 class="w-full rounded-xl border border-border px-5 py-3 outline-none focus:border-primary"
@@ -168,7 +163,8 @@ Send Message
 
 
 
-<!-- Map Placeholder -->
+
+<!-- Google Map -->
 
 <section class="bg-background-light py-16">
 
@@ -176,13 +172,15 @@ Send Message
 <div class="container mx-auto px-5 lg:px-8">
 
 
-<div
-class="flex h-72 items-center justify-center rounded-3xl bg-gray-200"
->
+<div class="overflow-hidden rounded-3xl shadow-lg">
 
-<p class="text-text-secondary">
-Google Map will be added here
-</p>
+
+<iframe
+src="https://www.google.com/maps/embed?pb="
+class="h-[400px] w-full border-0"
+loading="lazy"
+>
+</iframe>
 
 
 </div>
