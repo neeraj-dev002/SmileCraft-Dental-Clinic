@@ -1,0 +1,109 @@
+---
+const features = [
+  {
+    icon: "🦷",
+    title: "Advanced Dental Technology",
+    description:
+      "We use modern dental equipment and advanced techniques to provide safe and effective treatments."
+  },
+  {
+    icon: "👨‍⚕️",
+    title: "Experienced Dentists",
+    description:
+      "Our skilled dental professionals provide personalized care with years of clinical experience."
+  },
+  {
+    icon: "😌",
+    title: "Pain-Free Treatment",
+    description:
+      "Comfortable and gentle dental procedures designed to make your experience stress-free."
+  },
+  {
+    icon: "🏥",
+    title: "Modern Clinic Facility",
+    description:
+      "A clean, hygienic and patient-friendly clinic environment with premium facilities."
+  }
+];
+---
+
+<section class="bg-white py-20 lg:py-28 reveal ">
+
+  <div class="container mx-auto px-5 lg:px-8">
+
+
+    <!-- Heading -->
+
+    <div class="mx-auto max-w-2xl text-center">
+
+      <span
+        class="inline-flex rounded-full bg-secondary-light px-4 py-2 text-sm font-medium text-secondary-dark"
+      >
+        Why Choose Us
+      </span>
+
+
+      <h2
+        class="mt-5 text-3xl font-bold text-text-primary sm:text-4xl"
+      >
+        Quality Dental Care You Can Trust
+      </h2>
+
+
+      <p
+        class="mt-4 text-text-secondary"
+      >
+        We combine expert dentists, advanced technology and compassionate care
+        to deliver the best dental experience.
+      </p>
+
+    </div>
+
+
+
+    <!-- Cards -->
+
+    <div
+      class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+    >
+
+      {
+        features.map((feature) => (
+
+          <div
+            class="group rounded-2xl border border-border bg-white p-6 shadow-sm transition hover:-translate-y-2 hover:shadow-lg reveal "
+          >
+
+            <div
+              class="flex h-14 w-14 items-center justify-center rounded-xl bg-secondary-light text-3xl"
+            >
+              {feature.icon}
+            </div>
+
+
+            <h3
+              class="mt-6 text-xl font-semibold text-text-primary"
+            >
+              {feature.title}
+            </h3>
+
+
+            <p
+              class="mt-3 text-sm leading-6 text-text-secondary"
+            >
+              {feature.description}
+            </p>
+
+
+          </div>
+
+        ))
+      }
+
+
+    </div>
+
+
+  </div>
+
+</section>
