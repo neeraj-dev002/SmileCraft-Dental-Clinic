@@ -1,4 +1,5 @@
 ---
+import PageHero from "../../components/common/PageHero.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const doctors = [
@@ -26,43 +27,14 @@ const doctors = [
 ];
 ---
 
-<BaseLayout>
-
-
-<!-- Hero -->
-
-<section class="bg-background-light py-20 reveal ">
-
-<div class="container mx-auto px-5 text-center lg:px-8">
-
-
-<span
-class="rounded-full bg-secondary-light px-4 py-2 text-sm font-medium text-secondary-dark"
+<BaseLayout
+  title="Our Doctors"
+  description="Meet our experienced dentists and specialists."
 >
-Our Doctors
-</span>
-
-
-<h1
-class="mt-6 text-4xl font-bold text-text-primary sm:text-5xl"
->
-Meet Our Expert Dentists
-</h1>
-
-
-<p
-class="mx-auto mt-5 max-w-2xl text-text-secondary"
->
-Our experienced dental professionals provide advanced treatments
-with personalized care.
-</p>
-
-
-</div>
-
-</section>
-
-
+<PageHero
+  title="Our Doctors"
+  subtitle="Meet our experienced dental specialists."
+/>
 
 <!-- Doctors Cards -->
 
