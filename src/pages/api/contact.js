@@ -1,88 +1,88 @@
-import { supabase } from "../../lib/supabase";
+// import { supabase } from "../../lib/supabase";
 
 
-export async function POST({ request }) {
+// export async function POST({ request }) {
 
-  try {
+//   try {
 
-    const body = await request.json();
-
-
-    const {
-      name,
-      email,
-      phone,
-      message
-    } = body;
+//     const body = await request.json();
 
 
-    const { error } = await supabase
-      .from("contact_messages")
-      .insert([
-        {
-          name,
-          email,
-          phone,
-          message
-        }
-      ]);
+//     const {
+//       name,
+//       email,
+//       phone,
+//       message
+//     } = body;
 
 
-
-    if (error) {
-
-      console.log("SUPABASE ERROR:", error);
-
-
-      return new Response(
-        JSON.stringify({
-          success:false,
-          error:error.message
-        }),
-        {
-          status:500,
-          headers:{
-            "Content-Type":"application/json"
-          }
-        }
-      );
-
-    }
+//     const { error } = await supabase
+//       .from("contact_messages")
+//       .insert([
+//         {
+//           name,
+//           email,
+//           phone,
+//           message
+//         }
+//       ]);
 
 
 
-    return new Response(
-      JSON.stringify({
-        success:true
-      }),
-      {
-        status:200,
-        headers:{
-          "Content-Type":"application/json"
-        }
-      }
-    );
+//     if (error) {
+
+//       console.log("SUPABASE ERROR:", error);
 
 
-  } catch(error) {
+//       return new Response(
+//         JSON.stringify({
+//           success:false,
+//           error:error.message
+//         }),
+//         {
+//           status:500,
+//           headers:{
+//             "Content-Type":"application/json"
+//           }
+//         }
+//       );
+
+//     }
 
 
-    console.log("API ERROR:", error);
+
+//     return new Response(
+//       JSON.stringify({
+//         success:true
+//       }),
+//       {
+//         status:200,
+//         headers:{
+//           "Content-Type":"application/json"
+//         }
+//       }
+//     );
 
 
-    return new Response(
-      JSON.stringify({
-        success:false,
-        error:error.message
-      }),
-      {
-        status:500,
-        headers:{
-          "Content-Type":"application/json"
-        }
-      }
-    );
+//   } catch(error) {
 
-  }
 
-}
+//     console.log("API ERROR:", error);
+
+
+//     return new Response(
+//       JSON.stringify({
+//         success:false,
+//         error:error.message
+//       }),
+//       {
+//         status:500,
+//         headers:{
+//           "Content-Type":"application/json"
+//         }
+//       }
+//     );
+
+//   }
+
+// }
